@@ -8,18 +8,19 @@ Para visualizar el valor en hexadecimal se usará la función dechex
 <?php
 echo "<table>";
 
-for ($r =0; $r <=255; $r += 50) {
-    for ($g =0; $g <=255; $g += 50) {
+for ($r =0; $r <=255; $r += 50){
+    for ($g =0; $g <=255; $g += 50){
       echo "<tr>"; 
       
       for($b =0; $b <=255; $b += 50){
       $hexadecimal= "#". dechex($r). dechex($g). dechex($b);
         
-      echo "<td style='background-color: rgb($r,$g,$b)'> $hex </td>";
+      echo "<td style='background-color: rgb($r,$g,$b)'> $hexadecimal </td>";
         // echo "<td style=\"background-color: rgb($r,$g,$b)\"> $hex </td>";
       }
       echo "</tr>";
     }
 }
 echo "</table>";
+
 ?>
