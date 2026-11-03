@@ -91,7 +91,7 @@
             $aux = $num[$i];
         }
     }
-    for(j$
+    for(){}
 
 
     // Queremos saber si una contraseña es segura. Para que sea segura debe cumplir las siguientes reglas:
