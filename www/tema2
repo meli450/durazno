@@ -1,0 +1,65 @@
+<!-- Crea las siguientes funciones:
+    Una función que averigüe si un número es par: esPar(int $num): bool 
+ -->
+    echo "¿El número 7 es par? " + $esPar(7);
+    function esPar($num){
+        $esPar= false
+        if ($num % 2 == 0){
+            $esPar= true;
+        }
+        return $esPar;
+    }
+
+
+<!-- Una función que devuelva un array de tamaño $tam con números aleatorios comprendido
+    entre $min y $max : arrayAleatorio(int $tam, int $min, int $max) : array -->
+    $arrayAleatorio(10, 0, 9);
+
+    function arrayAleatorio($tam, $min, $max){
+        $array[$tam];
+
+        for($i=0; $i< $tam; $i++){
+            $array[i]= rand($min, $max);
+        }
+        return print_r($array[]);
+    }
+    echo "El array es: " + $arrayAleatorio + "\n";
+    
+
+    <!-- Una función que reciba un $array por referencia y devuelva la cantidad de 
+    num pares que hay almacenados: arrayPares(array &$array): int -->
+    $array= [1,2,3,4,5,6,7,8,9];
+
+    function arrayPares(&$array){
+        $contador=0;
+        $tamanoArr= count($array);
+
+        for($i=0;  $i < $tamanoArr; $i++){
+            if (esPar($i) == true){
+                $contador++;
+            }
+        }
+        return $contador;
+    }
+    echo "En el array hay un total de " + $arrayPares($array[]) + " números pares almacenados";
+
+
+<!-- Una función que devuelva el mayor de todos los números recibidos como parámetros: function mayor(): int. 
+    Utiliza las funciones func_get_args(), etc... No puedes usar la función max(). -->
+
+     <!-- Obtiene un array con los parámetros -->
+
+    function mayor(){
+        $mayor=0;
+        for ($i=0; $i < func_num_args(); $i++){
+            if (func_get_arg($i) > func_get_arg(++$i)){
+                $mayor= func_get_arg($i);
+            }    
+        }
+        return $mayor;
+    }
+    echo "El mayor número del array "+ func_get_args(); " es " + mayor();
+
+<!-- Una función que concatene todos los parámetros recibidos separándolos con un espacio:
+    function concatenar(...$palabras) : string. Utiliza el operador .... -->
+    function concatenar(...$palabras)
